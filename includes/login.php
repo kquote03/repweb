@@ -1,3 +1,2 @@
 <?php
-echo "PLACEHOLDER";
-print_r($_POST);
+    $creds = array("username"=>"$_POST[username]", "password"=>"$_POST[password]");
