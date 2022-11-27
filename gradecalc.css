@@ -1,0 +1,192 @@
+*{
+    font-family: 'Righteous', cursive;
+    }
+body{background-image:linear-gradient(to right,#260833,#7b36a9);min-height: 100vh;}
+
+#head1{color: #be8fdd; font-weight: bold; font-size: 50px; margin-top: 1px; text-shadow: 2px 2px 8px #000000a4;}
+#assignment1, #quiz1, #quiz2, #studentid,#assignment2,#final,#midterm{color: #cca6e6;  font-weight: bold; font-size:30px; text-shadow: 2px 2px 8px #0000004e;}
+
+#gradecalc{
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 80px;
+}
+
+#calccontainer{
+    /*style*/
+    border-radius: 15px;
+    box-shadow: 8px 8px 15px 15px rgba(0, 0, 0, 0.337);
+    border: none;
+    outline: none;
+    background: rgba(73, 62, 77, 0.963);
+    /*layout*/
+    display: flex;
+    width: 750px;
+    height: 550px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    padding: 30px;
+    margin-top: 110px;
+    
+}
+
+#calccontainer form{
+    flex-basis: 100%;
+    
+}
+
+
+#part1{
+    display: flex;
+    align-content: right;
+    justify-content: right;
+    flex-direction: column;
+    text-align: right;
+    flex-grow: 1;
+
+}
+
+#quiz1, #quiz2, #assignment1{  
+    justify-content: left;
+    align-items: left;
+    font-weight: bold;
+    margin-top: 30px;
+    font-size: 21px;
+    margin-left: -50px;
+    margin-right: 480px;
+    
+}
+
+
+#quiz1 *{
+margin-top: 29px;
+    flex-grow: 1;
+    margin-bottom: 15px;
+    
+}
+#q1{
+    
+    z-index: 1;
+}
+#quiz2 *{
+    margin-top: 15px; 
+    flex-grow: 1;
+    margin-bottom: 15px;
+    
+}
+#q2{
+    z-index: 2;
+}
+
+#assignment1 *{
+margin-top: 15px; 
+flex-grow: 1;
+
+}
+#a1{
+    z-index: 3;
+}
+
+#q1,#q2,#a1{
+width: 70px; height: 20px; padding: 7px;
+    border-radius: 5px;
+background-color: #f2f2f2e0;
+box-shadow: 0px 15px 20px rgba(46, 34, 53, 0.453);
+border: none;
+position: relative;
+}
+
+#sdid{
+width: 150px; height: 25px; padding: 5px;
+border-radius: 5px;
+background-color: #f2f2f2;
+box-shadow: 0px 15px 20px rgba(46, 34, 53, 0.453);
+border: none;
+}
+
+#part2{
+    display: flex;
+    align-content: right;
+    justify-content: right;
+    flex-direction: column;
+    text-align: right;
+    flex-grow: 1;
+    margin-top: -210PX;
+}
+
+#assignment2, #midterm, #final{  
+    justify-content: right;
+    align-items: right;
+    font-weight: bold;
+    font-size: 21px;
+    margin-top: -10px;
+    margin-right: 55px;
+}
+
+
+#assignment2 *{
+    margin-top: -20px;
+    flex-grow: 1;
+    margin-bottom: 15px;
+}
+#a2{
+    z-index: 4;
+}
+#midterm *{
+    margin-top: 54px;
+    flex-grow: 1;
+    margin-bottom: 15px;
+}
+#mid{
+    z-index: 5;
+}
+
+#final *{
+
+margin-top: 54px;
+flex-grow: 1;
+margin-bottom: 5px;
+}
+#fin{
+    z-index: 6;
+}
+
+#a2,#mid,#fin{
+    width: 70px; height: 20px; padding: 7px;
+    border-radius: 5px;
+background-color: #f2f2f2e0;
+box-shadow: 0px 15px 20px rgba(46, 34, 53, 0.453);
+border: none;
+position: relative;
+}
+
+#submitbutton{
+    margin-top: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#submit{
+    width: 230px; height: 50px; padding: 6px;
+    background-color: #523a61;
+    border: solid;
+    color: #ffffff; font-weight: bold; font-size: 17px;
+    font-family:'Righteous';
+        letter-spacing: 1.5px;
+        border-radius: 35px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.271);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        outline: none;
+}
+      #submit:hover {
+        background-color: #be8fdd;
+        box-shadow: 0px 15px 20px rgba(114, 86, 132, 0.4);
+        color: #fff;
+        transform: translateY(-7px);
+      }
+
