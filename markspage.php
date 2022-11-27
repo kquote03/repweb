@@ -2,7 +2,7 @@
 
 <html lang="en">
 <head>
-    <Title>Marks Page</title>
+    <title>Marks Page</title>
     <style>
     table,td,th{ border: 4px solid black;
     border-collapse:collapse; 
@@ -17,8 +17,8 @@
     </style>
 </head>
 <body>
-    <caption>Marks Page</caption>
     <table style="width:80%" id="table">
+    <caption>Marks Page</caption>
         <tr>
             <th>Student ID </th>
             <th>Course Nmae </th>
