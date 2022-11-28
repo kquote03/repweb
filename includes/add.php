@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'includes/db.php';
+include 'db.php';
 
 $sqlAdd = "INSERT INTO grades(id_fk, instructor_id_fk, course_name, quiz1, quiz2, assignment1, assignment2, midterm, finalexam, status)
 VALUES
@@ -10,7 +10,10 @@ VALUES
 print_r($_POST);
 echo $sqlAdd;
 
-mysqli_query($conn,$sqlAdd);
+if(mysqli_query($conn,$sqlAdd))
+echo "Success";
+else
+echo "not sucess";
 
-header("location: ../markspage.php");
+header("location: markspage.php");
 

@@ -39,7 +39,7 @@
             <th>Status</th>
         </tr>
         <?php
-            $sqlMarks = "SELECT * FROM grades WHERE instructor_id_fk=$_SESSION[id];";
+            $sqlMarks = "SELECT * FROM grades WHERE id_fk=$_SESSION[id];";
             echo $sqlMarks;
             $resultMarks = mysqli_query($conn,$sqlMarks);
             $rowMarks = mysqli_fetch_assoc($resultMarks);
