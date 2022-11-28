@@ -23,6 +23,9 @@
         <?php
         print_r($_SESSION);
     ?>
+    <form action="gradecalc.php" method="POST">
+        <input type="submit" value="Add student"/>
+    </form>
     <table style="width:80%" id="table">
     <caption>Marks Page</caption>
         <tr>
