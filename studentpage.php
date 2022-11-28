@@ -55,6 +55,8 @@
                echo "<td>$rowMarks[midterm]</td>"; 
                echo "<td>$rowMarks[finalexam]</td>"; 
                echo "<td>$rowMarks[status]</td>"; 
+               $rowMarks = mysqli_fetch_assoc($resultMarks);
+
             }
         ?>
     </table>
