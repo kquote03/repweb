@@ -27,6 +27,11 @@
                     <option>Withdrawn</option>
                    </select>
                 </div>
+
+                <div id="coursename">
+                    Course name: <input type="text" name="coursename"/>
+                </div>
+
                 <div id="part1">
                     <div id="quiz1">
                     Quiz 1: <input type="text" id="q1" maxlength="2" name="quiz1">
