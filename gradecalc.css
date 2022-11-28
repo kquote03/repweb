@@ -4,7 +4,7 @@
 body{background-image:linear-gradient(to right,#260833,#7b36a9);min-height: 100vh;}
 
 #head1{color: #be8fdd; font-weight: bold; font-size: 50px; margin-top: 1px; text-shadow: 2px 2px 8px #000000a4;}
-#assignment1, #quiz1, #quiz2, #studentid,#assignment2,#final,#midterm{color: #cca6e6;  font-weight: bold; font-size:30px; text-shadow: 2px 2px 8px #0000004e;}
+#assignment1, #quiz1, #quiz2, #studentid,#assignment2,#final,#midterm,#pass,#status{color: #cca6e6;  font-weight: bold; font-size:30px; text-shadow: 2px 2px 8px #0000004e;}
 
 #gradecalc{
     height: 60vh;
@@ -25,7 +25,7 @@ body{background-image:linear-gradient(to right,#260833,#7b36a9);min-height: 100v
     /*layout*/
     display: flex;
     width: 750px;
-    height: 550px;
+    height: 600px;
     justify-content: center;
     align-content: center;
     text-align: center;
@@ -189,4 +189,20 @@ position: relative;
         color: #fff;
         transform: translateY(-7px);
       }
+
+#pass,#status{
+font-size: 20px;
+margin-top: 15px;
+text-align: left;
+display: inline-block;
+vertical-align: middle;
+}
+
+#pass{
+    margin-right:60px;
+}
+#status{
+    margin-top: 18px;
+    margin-left:60px;
+}
 
