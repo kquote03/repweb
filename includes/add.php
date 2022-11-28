@@ -9,3 +9,8 @@ VALUES
 
 print_r($_POST);
 echo $sqlAdd;
+
+mysqli_query($conn,$sqlAdd);
+
+header("location: markspage.php");
+
