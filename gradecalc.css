@@ -4,7 +4,7 @@
 body{background-image:linear-gradient(to right,#260833,#7b36a9);min-height: 100vh;}
 
 #head1{color: #be8fdd; font-weight: bold; font-size: 50px; margin-top: 1px; text-shadow: 2px 2px 8px #000000a4;}
-#assignment1, #quiz1, #quiz2, #studentid,#assignment2,#final,#midterm,#pass,#status{color: #cca6e6;  font-weight: bold; font-size:30px; text-shadow: 2px 2px 8px #0000004e;}
+#assignment1, #quiz1, #quiz2, #studentid,#assignment2,#final,#midterm,#pass,#status,#coursename{color: #cca6e6;  font-weight: bold; font-size:30px; text-shadow: 2px 2px 8px #0000004e;}
 
 #gradecalc{
     height: 60vh;
@@ -63,7 +63,7 @@ body{background-image:linear-gradient(to right,#260833,#7b36a9);min-height: 100v
 
 
 #quiz1 *{
-margin-top: 29px;
+margin-top: 17px;
     flex-grow: 1;
     margin-bottom: 15px;
     
@@ -165,7 +165,7 @@ position: relative;
 }
 
 #submitbutton{
-    margin-top: 55px;
+    margin-top: 47px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -173,6 +173,7 @@ position: relative;
 #submit{
     width: 230px; height: 50px; padding: 6px;
     background-color: #523a61;
+    background-color: #9b7dad;
     border: solid;
     color: #ffffff; font-weight: bold; font-size: 17px;
     font-family:'Righteous';
@@ -205,4 +206,10 @@ vertical-align: middle;
     margin-top: 18px;
     margin-left:60px;
 }
+
+#coursename{
+    font-size: 20px;
+    margin-top: 20px;  
+}
+
 
