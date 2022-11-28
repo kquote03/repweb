@@ -1,27 +1,12 @@
 *{
     font-family: 'Righteous', cursive;
+    
     }
-body{background-image: url(bckg.avif); background-size: cover; min-height: 100vh;letter-spacing:2px;}
-.btn{
-    text-align: center;
-    padding-bottom:24px;
-    padding-top: 10px;
-    justify-content: center;
-    align-items: center;
-    width: 140px;
-    height: 50px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border: none;
-    border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.338);
-    cursor: pointer;
-    outline: none;
-    font-weight: bold;
-    font-size:21px;
-    }
-    #bodyContainer{
-        height: 60vh;
+body{background-image: url(uni1.png); background-size: 100% 100%; overflow: hidden; min-height: 100vh;letter-spacing:2px;}
+
+    
+#bodyContainer{
+        height: 70vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -32,10 +17,10 @@ body{background-image: url(bckg.avif); background-size: cover; min-height: 100vh
     #loginContainer{
         /*style*/
         border-radius: 15px;
-        box-shadow: 8px 8px 15px 15px rgba(0, 0, 0, 0.337);
+        box-shadow: 8px 8px 15px 15px rgba(0, 0, 0, 0.2);
         border: none;
         outline: none;
-        background: rgba(25, 16, 108, 0.963);
+        background: rgb(255, 255, 255);
         /*layout*/
         display: flex;
         width: 430px;
@@ -48,9 +33,6 @@ body{background-image: url(bckg.avif); background-size: cover; min-height: 100vh
         
     }
 
-    #signin{
-        padding-top: 30px;
-    }
     
     #loginContainer form{
         flex-basis: 100%;
@@ -72,7 +54,7 @@ body{background-image: url(bckg.avif); background-size: cover; min-height: 100vh
         align-items: center;
         font-weight: bold;
         font-size:21px;
-        margin-left: -40px;
+        
     }
 
     
@@ -87,17 +69,48 @@ body{background-image: url(bckg.avif); background-size: cover; min-height: 100vh
         margin-bottom: 30px;
     }
     #username, #password{
-        width: 160px; height: 25px; padding: 7px;
+        margin-right: 20px;
+        width: 140px; height: 25px; padding: 7px;
         float: left;
         border-radius: 5px;
-  background-color: #f2f2f2;
-  
+  background-color: #ffffff;
+  box-shadow: 5px 8px 8px 8px #8888885c;
+  border: none;
+  /*box-shadow: 0px 15px 20px rgba(46, 34, 53, 0.308);*/
+
     }
-    
-    /*linear-gradient(#2b1055,#7597de,#EC9EC0)*/
-    /*.btn1{
-        background: rgba(159, 159, 159, 0.25)
-    }*/
+    #signin{
+        padding-top: 30px; 
+    }
+    #btn1{
+        text-align: center;
+        padding-bottom:24px;
+        padding-top: 10px;
+        justify-content: center;
+        align-items: center;
+        width: 140px;
+        height: 50px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: none;
+        border-radius: 45px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 8px 15px rgba(0.1, 0.2, 0.2, 0.234);
+        cursor: pointer;
+        outline: none;
+        font-weight: bold;
+        font-size:21px;
+        position: relative;
+        z-index: 1;
+        }
+
+        #btn1:hover {background-color: #dccdff}
+
+        #btn1:active {
+          background-color: #977eeb;
+          box-shadow: 0 5px #666;
+          transform: translateY(4px);
+        }
   
   
   
