@@ -1,22 +1,40 @@
-<head>
-    <?php include 'includes/db.php'; ?>
-    <!--Fetch username-->
-    <?php
-        $creds = array("username"=>"$_POST[username]", "password"=>"$_POST[password]");
-        //print_r($creds);
-        $sql = "SELECT * FROM accounts WHERE username='$creds[username]';";
-        //echo $sql;
-        $result = mysqli_query($conn,$sql);
-        //if($result) echo "Result ran successfully";
-        //echo mysqli_num_rows($result);
+<?php
+session_start();
+include 'includes/db.php';
+$creds = array("username"=>"$_POST[username]", "password"=>"$_POST[password]");
+$sql = "SELECT * FROM accounts WHERE username='$creds[username]';";
+$result = mysqli_query($conn,$sql);
+if(mysqli_num_rows($result) != 0) echo "Result ran successfully";
+else{
+    header("Location: login.html?error=invalidlogin");
+    die();
+}
 
-        if(mysqli_num_rows($result) == 0)
-            echo "<script>alert('username not found')</script>";
+$row = mysqli_fetch_assoc($result);
 
-        $row = mysqli_fetch_assoc($result);
-        //print_r($row);
-    ?>
-</head>
-<body>
-    <h1>Welcome! <?php echo $row['username'] ?></h1>
-</body>
+
+if($creds['username'] != $row['username'] || $creds['password'] != $row['password']){
+    header("Location: login.html?error=invalidlogindetails");
+    die();
+}
+
+
+$auth = 0; 
+switch($row['type']){
+    case 'instructor':
+        $auth += 5;
+        break;
+    case 'admin':
+        $auth+= 10;
+        break;
+    case 'student':
+        $auth += 1;
+        break;
+}
+
+$_SESSION['username'] = $row['username'];
+$_SESSION['id'] = $row['id'];
+$_SESSION['auth'] = $auth;
+print_r($_SESSION);
+header("location: homepage.php");
+exit();
