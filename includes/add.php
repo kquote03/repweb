@@ -15,5 +15,5 @@ echo "Success";
 else
 echo "not sucess";
 
-header("location: markspage.php");
+header("location: ../markspage.php");
 
