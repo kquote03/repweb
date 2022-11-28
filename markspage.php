@@ -8,6 +8,29 @@
 
     <title>Marks Page</title>
     <style>
+        table,td,th{ border: 4px black;
+        border-collapse:collapse; 
+        }
+        th{ padding: 15px;
+         background-color:#be8fdd;
+         text-align: left;
+         color: white;
+        }
+        tr{
+            border-bottom: 1px solid #dddddd;
+        }
+        td{ padding:"5px";
+        text-align:center;
+        }
+        #table{
+            border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+        /*
         table,td,th{ border: 4px solid black;
         border-collapse:collapse; 
         }
@@ -16,7 +39,7 @@
         }
         td{ padding:"5px";
         text-align:center;
-        }
+        }*/
     </style>
 </head>
 <body>
@@ -27,7 +50,7 @@
         <input type="submit" value="Add student"/>
     </form>
     <table style="width:80%" id="table">
-    <caption>Marks Page</caption>
+        <caption><h3>Marks Page</h3></caption>
         <tr>
             <th>Student ID </th>
             <th>Course Nmae </th>
