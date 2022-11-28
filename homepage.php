@@ -20,7 +20,11 @@
         border-color:white;
         float:left;
         }
-
+       
+        #indexcontainer{
+            display: flex;
+            justify-content: center;
+        }
         #mkpage:hover {
         background-color: #be8fdd;
         box-shadow: 0px 15px 20px rgba(114, 86, 132, 0.4);
@@ -34,7 +38,8 @@
         transform: translateY(-7px);
        }
        #mkpage{
-        margin-left:510px;
+        /*margin-left:750px;*/
+        align-items: center;
        }
        #support{
         margin-left:20px;
@@ -65,7 +70,6 @@
                 ?>
 
                 <input type="button" value="Support" onclick="window.location.replace('https://aau.ac.ae/en/contact-alain-university/');" id="support"/>
-            </li>
-        </ul>
+
     </div>
 </body>
