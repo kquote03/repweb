@@ -2,18 +2,18 @@
 
 <html lang="en">
 <head>
+    <?php include 'includes/db.php' ?>
     <title>Marks Page</title>
     <style>
-    table,td,th{ border: 4px solid black;
-    border-collapse:collapse; 
-    }
-    th{ padding: 15px;
-     background-color:#be8fdd;
-    }
-    td{ padding:"5px";
-    text-align:center;
-    }
-
+        table,td,th{ border: 4px solid black;
+        border-collapse:collapse; 
+        }
+        th{ padding: 15px;
+         background-color:#be8fdd;
+        }
+        td{ padding:"5px";
+        text-align:center;
+        }
     </style>
 </head>
 <body>
@@ -28,7 +28,7 @@
             <th>Assignment2</th>
             <th>Midterm </th>
             <th>Final Exam </th>
-            <th>Frequency</th>
+            <th>Status</th>
         </tr>
     </table>
 </body>
