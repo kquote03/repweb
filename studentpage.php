@@ -46,6 +46,7 @@
             print_r($rowMarks);
 
             for($i = 0; $i < mysqli_num_rows($resultMarks); $i++){
+               echo "<tr>";
                echo "<td>$rowMarks[id_fk]</td>"; 
                echo "<td>$rowMarks[course_name]</td>"; 
                echo "<td>$rowMarks[quiz1]</td>"; 
@@ -55,6 +56,7 @@
                echo "<td>$rowMarks[midterm]</td>"; 
                echo "<td>$rowMarks[finalexam]</td>"; 
                echo "<td>$rowMarks[status]</td>"; 
+               echo "</tr>";
                $rowMarks = mysqli_fetch_assoc($resultMarks);
 
             }
