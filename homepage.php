@@ -14,9 +14,18 @@
     <div id="indexcontainer">
         <ul>
             <li>
-                <form action="markspage.php" method="POST">
-                    <input type="submit" value="Proceed to Marks Page"/>
-                </form>
+                <?php
+                if($_SESSION['auth'] >= 5){
+                echo "<form action=\"markspage.php\" method=\"POST\"> ";
+                echo "    <input type=\"submit\" value=\"Proceed to Marks Page\"/>";
+                echo "</form>";
+                }
+                else if($_SESSION['auth'] == 1){
+                echo "<form action=\"studentpage.php\" method=\"POST\"> ";
+                echo "    <input type=\"submit\" value=\"View Marks\"/>";
+                echo "</form>";
+                }
+                ?>
             </li>
             <li>
                 <input type="button" value="Support" onclick="window.location.replace('https://aau.ac.ae/en/contact-alain-university/');"/>

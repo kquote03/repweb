@@ -35,6 +35,7 @@ switch($row['type']){
 $_SESSION['username'] = $row['username'];
 $_SESSION['id'] = $row['id'];
 $_SESSION['auth'] = $auth;
+$_SESSION['type'] = $row['type'];
 print_r($_SESSION);
 header("location: homepage.php");
 exit();
