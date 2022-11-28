@@ -12,19 +12,6 @@
         </script>
     </head>
     <body >
-
-        <!--Login failure code-->
-        <script>
-            let errorCode = new URLSearchParams(location.search).get('error');
-            switch(errorCode){
-                case 'invalidlogin':
-                    alert("Invalid username / password, please try again");
-                    break;
-                case 'invalidlogindetails':
-                    alert("Incorrect username or password.");
-            }
-        </script>
-
         <div id="bodyContainer">
             <div id="loginContainer">
                 <form action="">
@@ -38,7 +25,7 @@
                         </div>
                     </div>
                     <div id="signin">
-                        <input type="submit" id="btn1" value="SignIn" name="submit"/>
+                        <input type="button" onClick="redirect()" id="btn1" value="Sign In"/>
                     </div>
                 </form>
             </div>
