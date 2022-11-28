@@ -50,7 +50,7 @@
 <body>
         <?php //print_r($_SESSION); ?>
 
-    <h1 id="welcome">Welcome! <?php echo $row['username'] ?></h1>
+    <h1 id="welcome">Welcome! <?php echo $_SESSION['username'] ?></h1>
     <div id="timecontainer">
         <p>The date is <?php echo date("Y/m/d");?></p>
     </div><br/><br/>
