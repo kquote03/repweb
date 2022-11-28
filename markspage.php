@@ -13,7 +13,7 @@
         }
         th{ padding: 15px;
          background-color:#be8fdd;
-         text-align: left;
+         text-align: center;
          color: white;
         }
         tr{
