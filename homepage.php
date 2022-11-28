@@ -5,7 +5,7 @@
 <style>
         
         *{text-align:center;}
-        #mkpage,#support{width: 230px; height: 50px; padding: 6px;
+        #mkpage,#support, #vmpage{width: 230px; height: 50px; padding: 6px;
          background-color: #9b7dad;
          
          font-family: "Times New Roman", Times, serif;
@@ -31,6 +31,12 @@
         color: #fff;
         transform: translateY(-7px);
         }
+        #vmpage:hover {
+        background-color: #be8fdd;
+        box-shadow: 0px 15px 20px rgba(114, 86, 132, 0.4);
+        color: #fff;
+        transform: translateY(-7px);
+        }
       #support:hover {
         background-color: #be8fdd;
         box-shadow: 0px 15px 20px rgba(114, 86, 132, 0.4);
@@ -41,6 +47,9 @@
         /*margin-left:750px;*/
         align-items: center;
        }
+       #vmpage{
+        align-items: center;
+        }
        #support{
         margin-left:20px;
        }
@@ -50,7 +59,7 @@
 <body>
         <?php //print_r($_SESSION); ?>
 
-    <h1 id="welcome">Welcome! <?php echo $_SESSION['username'] ?></h1>
+    <h1 id="welcome">Welcome! <?php echo $row['username'] ?></h1>
     <div id="timecontainer">
         <p>The date is <?php echo date("Y/m/d");?></p>
     </div><br/><br/>
@@ -64,7 +73,7 @@
                 }
                 else if($_SESSION['auth'] == 1){
                 echo "<form action=\"studentpage.php\" method=\"POST\"> ";
-                echo "    <input type=\"submit\" value=\"View Marks\"/>";
+                echo "    <input type=\"submit\" value=\"View Marks\"id=\"vmpage\"/>";
                 echo "</form>";
                 }
                 ?>
