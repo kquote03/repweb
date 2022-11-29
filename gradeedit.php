@@ -5,6 +5,7 @@
 <head>
 <?php 
 $sqlFind = "SELECT * FROM grades WHERE grade_id=$_POST[submit];";
+$_SESSION['edittingid'] = $_POST['submit'];
 $result = mysqli_query($conn,$sqlFind);
 $rowFind = mysqli_fetch_assoc($result);
 ?>
@@ -18,10 +19,10 @@ $rowFind = mysqli_fetch_assoc($result);
 <body>   
     <div id="gradecalc">
         <div id="calccontainer">
-            <form action="includes/add.php" method="POST">
+            <form action="includes/edit.php" method="POST">
                 <h1 id="head1">Grade Editor</h1>
                 <div id="studentid">
-                    Student ID: <input type ="text" id="sdid" maxlength="9" name="sid" redonly
+                    Student ID: <input type ="text" id="sdid" maxlength="9" name="sid" readonly
                     value="<?php echo $rowFind['id_fk'];?>"
                     />
                 </div>
