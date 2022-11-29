@@ -124,8 +124,7 @@
 
                echo "<td><label>Edit:</label><input type=\"submit\" value=\"$rowMarks[grade_id]\" name=\"submit\" id=\"edit\" /></td>";
                echo "</tr>";
-            $rowMarks = mysqli_fetch_assoc($resultMarks);
-
+            $rowMarks = mysqli_fetch_assoc($resultMarks); //go to next row
             }
         ?>
     </table>
