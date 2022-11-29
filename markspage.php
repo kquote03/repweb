@@ -40,6 +40,25 @@
         td{ padding:"5px";
         text-align:center;
         }*/
+        /*input[type=submit] {
+  color: transparent;
+}*/
+#edit {
+    color: transparent;
+}
+
+#edit {
+  position: relative;
+}
+
+#edit:after {
+    content: "E";
+    position: absolute;
+    display: block;
+    color: black;
+    top: 1px;
+    left: 1px;
+}
     </style>
 </head>
 <body>
@@ -61,8 +80,10 @@
             <th>Status</th>
             <th>    
         <input type="submit" value="Add student" name="submit"/>
+    </form>
     </th>
         </tr>
+<form action="gradeedit.php" method="POST">
         <?php
             $sqlMarks = "SELECT * FROM grades WHERE instructor_id_fk=$_SESSION[id];";
             //echo $sqlMarks;
@@ -77,12 +98,12 @@
                echo "<td>$rowMarks[quiz1]</td>"; 
                echo "<td>$rowMarks[quiz2]</td>"; 
                echo "<td>$rowMarks[assignment1]</td>"; 
-               echo "<td>$rowMarks[assignment2]</tdnt1r>"; 
-               echo "<td>$rowMarks[midterm]</tdnt2r>"; 
+               echo "<td>$rowMarks[assignment2]</td>"; 
+               echo "<td>$rowMarks[midterm]</td>"; 
                echo "<td>$rowMarks[finalexam]</td>"; 
-               echo "<td>$rowMarks[status]</tdmr>"; 
-               
-               echo "<td><input type=\"submit\" value=\"Edit\" name=\"submit\"/></td>";
+               echo "<td>$rowMarks[status]</td>"; 
+
+               echo "<td><label>Edit:</label><input type=\"submit\" value=\"$rowMarks[grade_id]\" name=\"submit\" id=\"edit\" /></td>";
                echo "</tr>";
             $rowMarks = mysqli_fetch_assoc($resultMarks);
 
