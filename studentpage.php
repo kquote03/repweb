@@ -4,9 +4,10 @@
 <html lang="en">
 <head>
     <?php include 'includes/db.php' ?>
+    <script type="text/javascript" src="grades.js"></script>
 
 
-    <title>Marks Page</title>
+    <title>Student Marks Page</title>
     <style>
          table,td,th{ border: 4px black;
         border-collapse:collapse; 
@@ -48,7 +49,9 @@
             <th>Assignment 1</th>
             <th>Assignment 2</th>
             <th>Midterm</th>
-            <th>Final Exam</th>
+            <th>Final Exam
+            <th>Total</th>
+            <th>Letter Assigned</th></th>
             <th>Status</th>
         </tr>
         <?php
@@ -68,6 +71,9 @@
                echo "<td>$rowMarks[assignment2]</td>"; 
                echo "<td>$rowMarks[midterm]</td>"; 
                echo "<td>$rowMarks[finalexam]</td>"; 
+               $totalMark = $rowMarks['quiz1'] + $rowMarks['quiz2'] + $rowMarks['assignment1'] + $rowMarks['assignment2'] + $rowMarks['midterm'] + $rowMarks['final'];
+               echo "<td>$totalMark</td>";
+               echo "<td><script>document.write(assignLetter($totalMark));</script></td>";
                echo "<td>$rowMarks[status]</td>"; 
 
                echo "</tr>";
