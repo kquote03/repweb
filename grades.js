@@ -24,7 +24,7 @@ return "B";
     else if (result>=75 && result<=79)
 return "C+";
     else if (result>=70 && result<=74)
-    document.getElementById("submitbutton").innerHTML= "The Grade is: C";
+return "C";
     else if (result>=65 && result<=69)
 return "D+";
     else if (result>=60 && result<=64)
