@@ -7,26 +7,32 @@ function calculateGrade(){
     var f5 = parseFloat(document.getElementById("mid").value);
     var f6 = parseFloat(document.getElementById("fin").value);
     var result=f1+f2+f3+f4+f5+f6;
-    if(result>=90 && result <=100 )
-    document.getElementById("submitbutton").innerHTML= "The Grade is: A";
+
+    document.getElementById("submitbutton").innerHTML= "The Grade is: "+assignLetter(result);
+        document.getElementById("submitbutton").style.font= "30px Georgia,serif";
+    document.getElementById("submitbutton").style.color= "#dcb7f4";
+    div.style.display = 'none';
+}
+
+function assignLetter(result){
+if(result>=90 && result <=100 )
+return "A";
     else if (result>=85 && result<=89)
-    document.getElementById("submitbutton").innerHTML= "The Grade is: B+";
+return "B+";
     else if (result>=80 && result<=84)
-    document.getElementById("submitbutton").innerHTML= "The Grade is: B";
+return "B";
     else if (result>=75 && result<=79)
-    document.getElementById("submitbutton").innerHTML= "The Grade is: C+";
+return "C+";
     else if (result>=70 && result<=74)
     document.getElementById("submitbutton").innerHTML= "The Grade is: C";
     else if (result>=65 && result<=69)
-    document.getElementById("submitbutton").innerHTML= "The Grade is: D+";
+return "D+";
     else if (result>=60 && result<=64)
-    document.getElementById("submitbutton").innerHTML= "The Grade is: D";
+return "D";
     else if (result<60)
-    document.getElementById("submitbutton").innerHTML= "The Grade is: F";
+return " F";
     else
-    document.getElementById("submitbutton").innerHTML= "Wrong values, please re-enter";
+return "Wrong values, please re-enter";
     
-    document.getElementById("submitbutton").style.font= "30px Georgia,serif";
-    document.getElementById("submitbutton").style.color= "#dcb7f4";
-    div.style.display = 'none';
+
 }
