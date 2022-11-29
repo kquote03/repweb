@@ -37,6 +37,14 @@
         <?php
         //print_r($_SESSION);
     ?>
+                <script>
+                    let errorCode = new URLSearchParams(location.search).get('error');
+                    switch(errorCode){
+                        case 'invalidmarks':
+                            alert("Invalid marks");
+                            break;
+                    }
+                </script>
     <form action="gradecalc.php" method="POST">
     </form>
     <table style="width:80%" id="table">

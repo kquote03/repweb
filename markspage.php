@@ -66,6 +66,19 @@
         <?php
         //print_r($_SESSION);
     ?>
+    <!-- Mark inpt failue code-->
+                <script>
+                    let errorCode = new URLSearchParams(location.search).get('error');
+                    switch(errorCode){
+                        case 'invalidmarks':
+                            alert("Invalid marks");
+                            break;
+                        case 'invalidpin':
+                            alert('invalid pin, please try again');
+                            break;
+                            
+                    }
+                </script>
 <form action="gradecalc.php" method="POST">
     <table style="width:80%" id="table">
         <caption><h3>Marks Page</h3></caption>

@@ -57,7 +57,7 @@
                         </div>
                 </div>
                 <div id="submitbutton">
-                    <input type="submit" id="submit" value="Calculate Grade"  onclick="calculateGrade()"/>
+                    <input type="submit" id="submit" value="Add student"/>
                 </div>
                 </div>
             </form>  
