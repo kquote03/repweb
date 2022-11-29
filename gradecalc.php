@@ -3,6 +3,10 @@
 <?php include 'includes/db.php';?>
 <html lang="en">
 <head>
+    <?php if($_POST['submit']=='Edit')
+            $edit = true;
+            print_r($_POST);
+    ?>
 <link rel="stylesheet" href="gradecalc.css">    
 <meta charset="en"/>
 <title>grade calc</title> 
@@ -13,10 +17,12 @@
 <body>   
     <div id="gradecalc">
         <div id="calccontainer">
-            <form action="includes/add.php" method="POST">
+            <form action="<?php if(!$edit) echo "includes/add.php"; else echo "includes/edit.php";?>" method="POST">
                 <h1 id="head1">Grade Calculator</h1>
                 <div id="studentid">
-                    Student ID: <input type ="text" id="sdid" maxlength="9" name="sid"/>
+                    Student ID: <input type ="text" id="sdid" maxlength="9" name="sid"
+                    <?php if($edit) echo " value=\"$_POST[idr]\"";?>
+                    />
                 </div>
                 <div id="pass">
                    4-Digit Password <input type="text" size="4" id="pass1" maxlength="4" name="pin"/>

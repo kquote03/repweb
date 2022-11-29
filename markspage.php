@@ -44,30 +44,31 @@
 </head>
 <body>
         <?php
-        print_r($_SESSION);
+        //print_r($_SESSION);
     ?>
-    <form action="gradecalc.php" method="POST">
-        <input type="submit" value="Add student"/>
-    </form>
+<form action="gradecalc.php" method="POST">
     <table style="width:80%" id="table">
         <caption><h3>Marks Page</h3></caption>
         <tr>
-            <th>Student ID </th>
-            <th>Course Nmae </th>
-            <th>Quiz 1 </th>
-            <th>Quiz 2 </th>   
-            <th>Assignment1 </th>
-            <th>Assignment2</th>
-            <th>Midterm </th>
-            <th>Final Exam </th>
+            <th>Student ID</th>
+            <th>Course Name</th>
+            <th>Quiz 1</th>
+            <th>Quiz 2</th>   
+            <th>Assignment 1</th>
+            <th>Assignment 2</th>
+            <th>Midterm</th>
+            <th>Final Exam</th>
             <th>Status</th>
+            <th>    
+        <input type="submit" value="Add student" name="submit"/>
+    </th>
         </tr>
         <?php
             $sqlMarks = "SELECT * FROM grades WHERE instructor_id_fk=$_SESSION[id];";
-            echo $sqlMarks;
+            //echo $sqlMarks;
             $resultMarks = mysqli_query($conn,$sqlMarks);
             $rowMarks = mysqli_fetch_assoc($resultMarks);
-            print_r($rowMarks);
+            //print_r($rowMarks);
 
             for($i = 0; $i < mysqli_num_rows($resultMarks); $i++){
                echo "<tr>";
@@ -76,15 +77,18 @@
                echo "<td>$rowMarks[quiz1]</td>"; 
                echo "<td>$rowMarks[quiz2]</td>"; 
                echo "<td>$rowMarks[assignment1]</td>"; 
-               echo "<td>$rowMarks[assignment2]</td>"; 
-               echo "<td>$rowMarks[midterm]</td>"; 
+               echo "<td>$rowMarks[assignment2]</tdnt1r>"; 
+               echo "<td>$rowMarks[midterm]</tdnt2r>"; 
                echo "<td>$rowMarks[finalexam]</td>"; 
-               echo "<td>$rowMarks[status]</td>"; 
+               echo "<td>$rowMarks[status]</tdmr>"; 
+               
+               echo "<td><input type=\"submit\" value=\"Edit\" name=\"submit\"/></td>";
                echo "</tr>";
             $rowMarks = mysqli_fetch_assoc($resultMarks);
 
             }
         ?>
     </table>
+    </form>
 </body>
 </html> 

@@ -34,29 +34,29 @@
 </head>
 <body>
         <?php
-        print_r($_SESSION);
+        //print_r($_SESSION);
     ?>
     <form action="gradecalc.php" method="POST">
     </form>
     <table style="width:80%" id="table">
     <caption><h3>Marks Page</h3></caption>
         <tr>
-            <th>Student ID </th>
-            <th>Course Nmae </th>
-            <th>Quiz 1 </th>
-            <th>Quiz 2 </th>   
-            <th>Assignment1 </th>
-            <th>Assignment2</th>
-            <th>Midterm </th>
-            <th>Final Exam </th>
+            <th>Student ID</th>
+            <th>Course Name</th>
+            <th>Quiz 1</th>
+            <th>Quiz 2</th>   
+            <th>Assignment 1</th>
+            <th>Assignment 2</th>
+            <th>Midterm</th>
+            <th>Final Exam</th>
             <th>Status</th>
         </tr>
         <?php
             $sqlMarks = "SELECT * FROM grades WHERE id_fk=$_SESSION[id];";
-            echo $sqlMarks;
+            //echo $sqlMarks;
             $resultMarks = mysqli_query($conn,$sqlMarks);
             $rowMarks = mysqli_fetch_assoc($resultMarks);
-            print_r($rowMarks);
+            //print_r($rowMarks);
 
             for($i = 0; $i < mysqli_num_rows($resultMarks); $i++){
                echo "<tr>";
